@@ -19,11 +19,17 @@ sayHello();
 // create a person object with twoe methods
  const person = {
      name:'Konrad',
+     walk() {
+         console.log(this); 
+     },
      talk(){},
-     walk(){}
+     
  }
  
  person.name = 'Pedro';
  person.talk();
  let targetProperty = 'name';
  person[targetProperty] = 'Pablo'; // It worked fine but I dislike it
+ 
+ // Testing the this js keyword
+ person.walk(); // With the console.log to a simple this will return a reference to current object to the console
