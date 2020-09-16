@@ -33,3 +33,31 @@ sayHello();
  
  // Testing the this js keyword
  person.walk(); // With the console.log to a simple this will return a reference to current object to the console
+
+
+ // Understandig Arrow function
+   
+   // old way function creation as object
+      let squareOld = function (n){
+          return n*n;
+      }
+      
+      // Modern Js implements arrow functions hommiting function keyword as follows
+      let squareModern = (n)=>{ // the parentesis here are for more than one args
+          return n*n;
+      }
+      
+      // more modern users usually have 
+      let squareRenewed = n => {return n*n ; }
+      
+      // even more amasing having no args just type
+       let noArgs = ()=>{
+           console.log('No args function object declaring with arrow function');
+       }
+      
+      
+   const square = number => {
+       return number * number;
+   }
+ square(3);
+ 
