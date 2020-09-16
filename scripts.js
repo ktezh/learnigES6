@@ -61,3 +61,17 @@ sayHello();
    }
  square(3);
  
+ // Understanding and using arrow functions on the road
+  // Manage a real Jobs Opening Recruit list
+    const jobs = [
+        {id:1, isActive:true ,name:'Senior Developer'},
+        {id:2, isActive:true,name:'Devops Software Manager'},
+        {id:3, isActive:false,name:'Software development Sheef'},
+        {id:4, isActive:true,name:'UX/UI senior Designer'}
+    ];
+   // Using the arrow function over all his power with Objects filter properties
+const activeJobs =jobs.filter(a => a.isActive) // filter returns all the occurrence
+console.log('Lista de Trabajos activos:\n',activeJobs);
+
+
+ 
