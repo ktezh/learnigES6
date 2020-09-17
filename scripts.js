@@ -145,7 +145,9 @@ class Person {
         return this.name;
     }
     
-    sayHello(someone) { console.log("Hello ", someonee); };
+    sayHello(someone) { 
+                       console.log("Hello ", someone); 
+                       };
 }
      
      // -- instancing new people object init named 'Mosh'
@@ -160,3 +162,5 @@ class Person {
    }
 
 const afriend = new Friend('Andrew Tanembaun');
+console.info('The new friend name is:',afriend.getName());
+afriend.sayHello('Konrad!!');
