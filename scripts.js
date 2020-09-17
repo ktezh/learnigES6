@@ -144,9 +144,19 @@ class Person {
     getName(){ 
         return this.name;
     }
+    
+    sayHello(someone) { console.log("Hello ", someonee); };
 }
      
      // -- instancing new people object init named 'Mosh'
      const people = new Person('Mosh') ;
         people.setName('Konrad'); // -- >> Re name the people obj. as 'Konrad'
          console.info('Renamed the person Mosh to :',people.getName());
+         
+// Using inheritage and classes 
+   class Friend extends Person {
+       doParty(){console.log("We are doing a great party!!");};
+       
+   }
+
+const afriend = new Friend('Andrew Tanembaun');
