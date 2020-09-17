@@ -157,10 +157,23 @@ class Person {
          
 // Using inheritage and classes 
    class Friend extends Person {
+       constructor(name,friendship) // refactoring the constructor
+       {
+           super(name); // passing the args which belong to superclass
+           // cath exact friend class attributes
+           this.friendship = friendship;
+           
+       }
+       getFriendship(){return this.friendship;}
        doParty(){console.log("We are doing a great party!!");};
+       
        
    }
 
-const afriend = new Friend('Andrew Tanembaun');
+const afriend = new Friend('Andrew Tanembaun', 'Best friend.');
+// a friend has no implemented this methods  or even the constructos... it tooks it from his father super class
 console.info('The new friend name is:',afriend.getName());
-afriend.sayHello('Konrad!!');
+afriend.sayHello('Konrad!!'); 
+console.info('Geting friendship level:',afriend.getFriendship());
+
+
