@@ -74,4 +74,75 @@ const activeJobs =jobs.filter(a => a.isActive) // filter returns all the occurre
 console.log('Lista de Trabajos activos:\n',activeJobs);
 
 
- 
+// Using objets map() property
+
+let avaliableJobs = jobs.map((jb,index)=>{
+    if(jb.isActive) return '<li>'+jb.name+'</li>';
+} )
+
+// Another way to do same is having use of the template for string using variables direct to the string
+// Avobe are no problem's bcause the next code  just override the 
+ avaliableJobs = jobs.map((jb, index) => {
+    if (jb.isActive) return `<li>${jb.name}</li>`;
+ })
+
+console.log(avaliableJobs);
+
+const avaliable = document.getElementById('avaliable');
+avaliable.innerHTML = avaliableJobs; 
+
+// Objects destructuring
+
+  const address = {
+      street: 'Ave 25',
+      apartmentNumber: '28239',
+      city: 'Havana',
+      country:'Cuba'
+  }
+  
+  // to have independient variables from the object containing that info we can make it as old days 
+  /*
+  let street = address.street; // ----> one by one
+  ...
+  */
+  
+  // modern JavaScript help us with 
+  const {street:st,apartmentNumber,city,country} = address;// let us use street against address.street and so on
+   console.info('Get street values as st aliases: ' + st); // using aliases against full key, this : let us use st against the original street as key to get the value
+     console.info('Apartment no:'+apartmentNumber);
+     
+     address.street = 'John Stanton';
+      console.info('Modified address objetc:',st); // --> it will show old copy 
+      console.info('Modified address objetc:',address.street); // ---> it will show updated value
+      
+// Spread Operaator
+ const frst = [1,2,3];
+ const sec  = ['a','b','c'];
+   
+    const joined = ['initialItem',...frst,'middleItem',...sec,'lastItem'];
+    console.info('New array joined:',joined);
+// new object to test spread Ops 
+ const fr = {name: 'Konrad'}
+ const snd = {job: 'IT Support'};
+  const personalInfo = {...fr,...snd,location: 'Cuba'};
+   console.info('Creating a new object personalInfo:', personalInfo);
+
+
+// Using Classes of object and constructos
+class Person {
+    constructor(name){
+        this.name = name;
+    }
+    
+    setName(name){
+        this.name = name;  
+    }
+    
+    getName(){
+        return this.name;
+    }
+}
+     
+     const people = new Person('Mosh') ;
+        people.setName('Konrad');
+         console.info(people.getName());

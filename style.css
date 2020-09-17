@@ -2,11 +2,24 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    display: inline-block;
-    background: #ddd;
-    color: #535;
+    background: url('imgs/developer-bg.jpg') no-repeat;
+    background-size: 100%;
+    color: rgba(233, 227, 233, 0.649);
+    border: 0;
 }
 
 div.container {
-    margin: 20% 20% 0 20%;
+    margin: 5% 30% 0 30%;
+    width: 40%;
+    height: 30%;
+    border: solid 1px #222222;
+    border-radius: 6px;
+    box-shadow: #000;
+    background-color: rgba(80, 74, 80, 0.449);
+    padding-bottom: 20px;
+    font-size: 1.3em;
+}
+
+#avaliable {
+    color: rgba(207, 207, 207, 0.649);
 }
