@@ -81,7 +81,7 @@ let avaliableJobs = jobs.map((jb,index)=>{
 } )
 
 // Another way to do same is having use of the template for string using variables direct to the string
-// Avobe are no problem's bcause the next code  just override the 
+// Avobe are no problem's  bcause the next code  just override the 
  avaliableJobs = jobs.map((jb, index) => {
     if (jb.isActive) return `<li>${jb.name}</li>`;
  })
@@ -128,21 +128,25 @@ avaliable.innerHTML = avaliableJobs;
    console.info('Creating a new object personalInfo:', personalInfo);
 
 
-// Using Classes of object and constructos
+// Using Classes of object and constructor spetial method
 class Person {
     constructor(name){
-        this.name = name;
+        this.name = name; // init name property
     }
     
+    
+    // methods here ------------> setters
     setName(name){
         this.name = name;  
     }
     
-    getName(){
+    // methods here ------------> getters
+    getName(){ 
         return this.name;
     }
 }
      
+     // -- instancing new people object init named 'Mosh'
      const people = new Person('Mosh') ;
-        people.setName('Konrad');
-         console.info(people.getName());
+        people.setName('Konrad'); // -- >> Re name the people obj. as 'Konrad'
+         console.info('Renamed the person Mosh to :',people.getName());
