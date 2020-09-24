@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: url('imgs/developer-bg.jpg') no-repeat;
+    //background: url('imgs/developer-bg.jpg') no-repeat;
     background-size: 100%;
     color: rgba(233, 227, 233, 0.649);
     border: 0;
@@ -22,4 +22,12 @@ div.container {
 
 #avaliable {
     color: rgba(207, 207, 207, 0.649);
+}
+
+#btn{
+    margin: 20px 10px 10px 10px;
+    font-size: 20px;
+    color: rgb(25, 18, 37);
+    border: 0px;
+    border-radius: 7px;
 }

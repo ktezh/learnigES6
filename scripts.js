@@ -176,4 +176,40 @@ console.info('The new friend name is:',afriend.getName());
 afriend.sayHello('Konrad!!'); 
 console.info('Geting friendship level:',afriend.getFriendship());
 
+//----------------------------------------------------------------
+//   Solviing  Js Chalenging Projects for school and Bgner
+//   https://jsbeginners.com/javascript-projects-for-beginners/ 
+//----------------------------------------------------------------
+
+// Pusle one is change bg-color randomice with a button
+
+class BgColor{
+constructor(){
+    this.red= this.randInteger();
+    this.green = this.randInteger();
+    this.blue = this.randInteger();
+    
+}
+
+  // ---- Methods here ---
+  randInteger(){return parseInt(Math.random()*255);}
+  
+  getBgColor(){return "rgba("+`${this.red},${this.green},${this.blue}`+")";  }
+
+}
+
+// -- Add an OnClick Listener to the button
+document.getElementById('btn').onclick = function(){changeBg();}
+
+// Called function to change colors from button and body background Randomly
+function changeBg(){
+    const bg = new BgColor();
+    const btC = new BgColor();
+     const bdy = document.getElementById('bd');
+     const bt = document.getElementById('btn')
+       bdy.style.backgroundColor = bg.getBgColor();
+       bt.style.backgroundColor  = btC.getBgColor();
+}
+   
+
 
